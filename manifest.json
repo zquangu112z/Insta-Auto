@@ -1,0 +1,25 @@
+{
+  "name": "InstagramSurfing",
+  "description": "This extension automaticaly performs Instagram actions: Like, Follow, Comment... for marketing.",
+  "version": "1.0",
+
+  "permissions": [
+    "activeTab"
+  ],
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_title": "Let's surf",  
+    "default_popup": "popup.html"
+  },
+
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "browser_action": {
+    "default_title": "Make this page red"
+  },
+  "manifest_version": 2
+}
+
