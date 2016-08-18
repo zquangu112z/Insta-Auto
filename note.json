@@ -1,0 +1,33 @@
+"background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+
+
+  // chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+	// 	chrome.tabs.sendMessage(tabs[0].id, {greeting: "hello"}, function(response) {
+	// 		//Neu co phan hoi nghia la dang co macro chay
+	// 		//li do la trong macro da co dang ki su kien nhan message
+	// 		if (response) {//co phan hoi
+	// 			console.log("Already there");
+	// 		}
+	// 		else {
+	// 			console.log("Not there, inject contentscript");
+	// 			//switch macro 
+	// 			if (cbLike.checked && cbFollowComment.checked){
+	// 				doLikeAndCommnet();
+	// 			}else if (cbLike.checked){
+	// 				doLike();
+	// 			}else{
+	// 				doComment();
+	// 			}
+
+	// 		}
+	// 	});
+	// });
+
+1/ kiem tra xem co content script nao dang chay hay khong, vi:
+a. moi lan click la moi lan phat sinh su kien
+b. moi lan click vao icon la 1 lan load extension moi
+2/ refresh page khi stop
+3/ lam the nao de toggle icon extension? de tranh truong hop nguoi ta click lan thu 2

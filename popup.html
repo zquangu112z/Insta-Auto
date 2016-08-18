@@ -1,0 +1,33 @@
+<html>
+<head>
+	<title>Setting</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<link href="popup.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<h1>Insta AutoSurf</h1>
+	
+	<h2 id= "status-app">Hello friends, have fun!</h2>
+	<p>1. Search your targeted hashtag</p>
+	<p>2. Change to list view</p></br>
+	<form name="setup">
+		<input id="cb_like" type="checkbox" checked="checked"  /> Like <br/> 
+		<!-- checked="checked" -->
+		
+		<input id="cb_follow" type="checkbox" checked="checked"  /> Follow <br/> <br/>
+		
+		Play repeatedly: <input type="number" min="1" id="number-loop" value="15" />
+	</form>
+	<input type="button"  id = "play-start" value="Play Loop"/>
+	<input type = "button" id = "play-stop" value="Stop"/>
+
+	<script src="popup.js"></script> 
+</body>
+<footer class="footer">
+	<div></div>
+	<span id="year">2016</span> -
+	<a class = "footer-a" target=_blank href="https://www.instagram.com/nguqtruong/">@nguqtruong</a> - <span id="location">from Da Nang</span>
+</footer>
+
+</html>
+

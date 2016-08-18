@@ -36,6 +36,7 @@ function autoLikeInHashTagSearch(){
   setTimeout(function(){
     //wait    
     clickButtonHavesInnerText("Like");
+    clickButtonHavesInnerText("Follow");
   }, 2000);
 }
 
@@ -48,17 +49,40 @@ function clickButtonHavesInnerText(innerText){
   if(found!=null){
     found.click();
   }else{
+    var found2 = getButtonByInnerText(innerText);
+    if (found2!=null) {
+      found2.click();
+    }
     //console.log("Error!!! please reload page & extension! Can't find"+innerText);
   }
 }
 
 
 /*
-*get element by text
+*get <a> by text
 *@text
 */
 function getElementByInnerText(innerText){
   var aTags = document.getElementsByTagName("a");
+  var searchText = innerText;
+  var found;
+
+  for (var i = 0; i < aTags.length; i++) {
+    if (aTags[i].textContent == searchText) {
+      found = aTags[i];
+      break;
+    }
+  }
+  return found;
+}
+
+
+/*
+*get <button> by text
+*@text
+*/
+function getButtonByInnerText(innerText){
+  var aTags = document.getElementsByTagName("button");
   var searchText = innerText;
   var found;
 
